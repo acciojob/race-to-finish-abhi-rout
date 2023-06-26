@@ -18,7 +18,7 @@ let c=new Promise((resolve)=>{
 let d=new Promise((resolve)=>{
 	setTimeout(()=>{
 		resolve("d");
-	},2000)
+	},2500)
 })
 let e=new Promise((resolve)=>{
 	setTimeout(()=>{
@@ -26,7 +26,7 @@ let e=new Promise((resolve)=>{
 	},2000)
 })
 
-let x=Promise.any{[a,b,c,d,e]}
+let x=Promise.any([a,b,c,d,e])
 window.promises=[a,b,c,d,e]
 x.then((data)=>{
 	const element=document.getElementById("output");
